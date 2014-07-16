@@ -19,3 +19,6 @@
 
 /public/system/dragonfly
 /.env
+
+/gems
+/spring
