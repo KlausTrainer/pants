@@ -10,7 +10,7 @@ lock '3.2.1'
 
 set :application, 'pants'
 set :stages, ["production"]
-set :repo_url, 'git@github.com:hmans/pants.git'
+set :repo_url, 'https://github.com/KlausTrainer/pants.git'
 set :deploy_via, :remote_cache
 
 # Default branch is :master
