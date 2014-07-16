@@ -46,7 +46,7 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-set :chruby_ruby, '2.1'
+set :chruby_ruby, '2.1.2'
 
 namespace :deploy do
   desc 'Restart application'
