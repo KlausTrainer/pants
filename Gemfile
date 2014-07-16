@@ -33,7 +33,6 @@ gem 'microformats2'
 
 # Binary asset handling
 gem 'dragonfly'
-gem 'dragonfly-s3_data_store'
 
 # Authorization/Authentication
 gem 'cancancan'
