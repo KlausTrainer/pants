@@ -1,5 +1,10 @@
 require File.expand_path('../boot', __FILE__)
 
+# make sure that all required environment variables are set before all
+# the other stuff gets loaded
+require "dotenv"
+Dotenv.load
+
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_record/railtie"
