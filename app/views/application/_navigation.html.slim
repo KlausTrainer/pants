@@ -10,5 +10,3 @@ nav role="primary"
       = navigation_entry t('.settings'), [:edit, :user], controller: 'users'
     - if current_user.present?
       = navigation_entry fa_icon('sign-out'), :login, method: :delete, controller: 'auth'
-    - else
-      = navigation_entry t('.login'), :login, controller: 'auth'
