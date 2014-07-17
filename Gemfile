@@ -71,7 +71,10 @@ group :development do
   # Nicer error messages
   gem 'better_errors'
   gem 'binding_of_caller'
+end
 
+# Development only
+group :development do
   # Log cleanup
   gem 'quiet_assets'
 end
