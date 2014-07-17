@@ -48,11 +48,13 @@ set :linked_files, %w{config/initializers/action_mailer.rb config/secrets.yml}
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
+set :puma_pidfile, "#{shared_path}/tmp/pids/puma.pid"
+
 namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app) do
-      execute :touch, release_path.join('tmp/restart.txt')
+      execute "if [ -f #{fetch(:puma_pidfile)} ]; then kill -USR2 `cat #{fetch(:puma_pidfile)}`; fi"
     end
   end
 
