@@ -6,7 +6,6 @@ ruby '2.1.2'
 # Core
 gem 'rails', '4.1.6'
 gem 'pg'
-gem 'puma', require: false
 gem 'rack-cache', require: 'rack/cache'
 gem 'timers'
 gem 'exception_notification'
@@ -74,6 +73,7 @@ group :development do
 end
 
 # Development only
+#
 group :development do
   # Log cleanup
   gem 'quiet_assets'
@@ -85,7 +85,8 @@ group :test do
   gem 'webmock'
 end
 
-# Production only
+# Staging & Production only
 #
-group :production do
+group :staging, :production do
+  gem 'puma'
 end
