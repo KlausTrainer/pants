@@ -6,7 +6,6 @@ ruby '2.1.2'
 # Core
 gem 'rails', '4.1.6'
 gem 'pg'
-gem 'rack-cache', require: 'rack/cache'
 gem 'timers'
 gem 'exception_notification'
 gem 'lograge'
