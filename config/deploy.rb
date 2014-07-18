@@ -38,7 +38,7 @@ set :log_level, :info
 # set :pty, true
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/media}
 
 set :linked_files, %w{config/initializers/action_mailer.rb config/secrets.yml}
 
