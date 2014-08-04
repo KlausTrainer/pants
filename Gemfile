@@ -65,6 +65,7 @@ group :development do
   gem 'capistrano-rails', require: false
   gem 'capistrano-chruby', require: false
   gem 'capistrano-bundler', require: false
+  gem 'capistrano-rbenv', require: false
 
   # Nicer error messages
   gem 'better_errors'
