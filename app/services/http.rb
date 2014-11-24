@@ -4,6 +4,6 @@
 class HTTP
   include HTTParty
 
-  # Don't verify SSL certificates. Probably a bad idea in the long run.
-  default_options.update(verify: false)
+  # Verify TLS certificates. Not a bad idea in the long run.
+  default_options.update(verify: true)
 end
