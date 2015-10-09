@@ -1,5 +1,3 @@
-require 'html/sanitizer'
-
 class Post < ActiveRecord::Base
   # Disable STI
   #
@@ -37,7 +35,7 @@ class Post < ActiveRecord::Base
           self.title = to_title.try(:truncate, 200)
 
           # Extract and save tags
-          self.tags = TagExtractor.extract_tags(HTML::FullSanitizer.new.sanitize(body_html)).map(&:downcase)
+          self.tags = TagExtractor.extract_tags(Rails::Html::FullSanitizer.new.sanitize(body_html)).map(&:downcase)
         rescue Exception => e
           if Rails.env.production?
             ExceptionNotifier.notify_exception(e)

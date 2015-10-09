@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :post do
     user
-    body { Faker::Lorem.paragraphs.join("\n\n") }
+    body { FFaker::Lorem.paragraphs.join("\n\n") }
     published_at { rand(300000).minutes.ago }
     type 'pants.post'
   end

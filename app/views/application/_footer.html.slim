@@ -4,4 +4,4 @@ footer role="primary"
       ' #{raw ENV['PANTS_TAGLINE']} &middot;
     - if can?(:manage, :server)
       ' #{link_to "Server Admin", :server} &middot;
-    =' link_to "#pants #{Pants::VERSION}", "https://github.com/hmans/pants/releases/tag/#{Pants::VERSION}"
+    => link_to "#pants #{Pants::VERSION}", "https://github.com/hmans/pants/releases/tag/#{Pants::VERSION}"

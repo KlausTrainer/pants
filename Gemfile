@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 
-# Make sure we're running on Ruby 2.1
-ruby '2.1.2'
-
 # Core
-gem 'rails', '4.1.6'
+gem 'rails', '~> 4.2.4'
+gem 'responders', '~> 2.1'
 gem 'pg'
 gem 'timers'
 gem 'exception_notification'
@@ -16,13 +14,13 @@ gem 'dotenv-rails'
 gem 'dotenv-deployment'
 
 # Frontend
-gem 'sass-rails', '~> 4.0.3'
-gem 'uglifier', '>= 1.3.0'
+gem 'sass-rails', '~> 5.0.4'
+gem 'uglifier', '~> 2.7.2'
 gem 'jquery-rails'
 gem 'slim-rails'
-gem 'compass-rails'
-gem 'simple_form'
-gem 'slodown', github: 'hmans/slodown', branch: 'master'
+gem 'compass-rails', '~> 2.0.5'
+gem 'simple_form', '~> 3.2.0'
+gem 'slodown', git: 'https://github.com/hmans/slodown'
 gem 'font-awesome-rails'
 gem 'kaminari'
 gem 'microformats2'
@@ -32,14 +30,14 @@ gem 'dragonfly'
 
 # Authorization/Authentication
 gem 'cancancan'
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1'
 
 # API
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder', '~> 2.3'
 
 # HTTP interactions
 gem 'httparty'
-gem 'webmention', github: 'indieweb/mention-client-ruby'
+gem 'webmention', git: 'https://github.com/indieweb/mention-client-ruby'
 
 # Development & Testing only
 #
@@ -55,7 +53,7 @@ group :test, :development do
   # RSpec & friends
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'ffaker'
+  gem 'ffaker', '~> 2.1'
 end
 
 # Development only.
