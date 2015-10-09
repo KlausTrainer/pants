@@ -1,12 +1,13 @@
 nav role="primary"
-  ul
-    - if can?(:read, Post)
-      = navigation_entry t('.blog'), :root, controller: 'posts'
-    - if can?(:read, TimelineEntry)
-      = navigation_entry t('.network'), :network, controller: 'timeline_entries'
-    - if can?(:read, Friendship, user_id: current_site.id)
-      = navigation_entry t('.following'), :friendships, controller: 'friendships'
-    - if can?(:update, current_site)
-      = navigation_entry t('.settings'), [:edit, :user], controller: 'users'
-    - if current_user.present?
-      = navigation_entry fa_icon('sign-out'), :login, method: :delete, controller: 'auth'
+  - if current_user.present?
+    ul
+      - if can?(:read, Post)
+        = navigation_entry t('.blog'), :root, controller: 'posts'
+      - if can?(:read, TimelineEntry)
+        = navigation_entry t('.network'), :network, controller: 'timeline_entries'
+      - if can?(:read, Friendship, user_id: current_site.id)
+        = navigation_entry t('.following'), :friendships, controller: 'friendships'
+      - if can?(:update, current_site)
+        = navigation_entry t('.settings'), [:edit, :user], controller: 'users'
+      - if current_user.present?
+        = navigation_entry fa_icon('sign-out'), :login, method: :delete, controller: 'auth'
