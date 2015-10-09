@@ -5,5 +5,3 @@ header role="primary" class=(current_site.flair_uid.present? ? 'with-flair' : ni
     .header-site-info
       .header-site-name
         = link_to current_site.display_name, root_url, class: 'p-name u-url'
-      .header-site-domain
-        = link_to current_site.domain, :root
