@@ -12,7 +12,7 @@ header[role="primary"] {
   height: 100%;
   position: relative;
 
-  background-color: $color-theme;
+  background-color: #eee;
 
   @include on-mobile {
     margin-left: 0;
@@ -99,7 +99,7 @@ header[role="primary"].with-flair {
 
 .header-site-name {
   bottom: 35px;
-  color: #fff;
+  color: #555;
   font-size: 40px;
   font-weight: bold;
   text-shadow: rgba(#000, 0.25) 0px 3px 3px;
